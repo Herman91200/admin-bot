@@ -1,0 +1,21 @@
+# config.py
+# Настройки бота-автоповышателя.
+
+import os
+
+# Токен бота от @BotFather
+BOT_TOKEN = os.getenv("", "")
+
+# Твой личный ID — тебе приходят уведомления
+# Узнать: @userinfobot
+ADMIN_ID = int(os.getenv("7691278944", "0"))
+
+# Файлы
+DB_PATH = "data/bot.db"
+LOG_PATH = "bot.log"
+
+# Проверки
+if not BOT_TOKEN:
+    raise ValueError("Не задан BOT_TOKEN!")
+if not ADMIN_ID:
+    raise ValueError("Не задан ADMIN_ID!")
